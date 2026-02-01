@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos | The Sweet Joy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <img src="img/logo.jpeg" alt="Logo The Sweet Joy">
+    <h1>Realiza tu Pedido</h1>
+</header>
+
+<nav>
+    <a href="index.html">Inicio</a> 
+    <a href="productos.html">Productos</a> 
+    <a href="pedidos.html">Pedidos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="nosotros.html">Nosotros</a>
+</nav>
+
+<main>
+
+    <section class="products">
+        <form class="product-card">
+
+            <h3>Información del Cliente</h3>
+
+            <label>Nombre completo</label>
+            <input type="text" placeholder="Tu nombre" required>
+
+            <label>Teléfono</label>
+            <input type="tel" placeholder="809-000-0000" required>
+
+            <label>Correo electrónico</label>
+            <input type="email" placeholder="correo@email.com">
+
+            <label>Producto</label>
+            <select required>
+                <option value="">Seleccione un producto</option>
+                <option>Pastel de Tres Leches</option>
+                <option>Tiramisú</option>
+                <option>Cheesecake</option>
+                <option>Selva Negra</option>
+                <option>Tarta Sacher</option>
+                <option>Red Velvet</option>
+            </select>
+
+            <label>Cantidad</label>
+            <input type="number" min="1" value="1">
+
+            <label>Fecha de entrega</label>
+            <input type="date" required>
+
+            <label>Detalles del pedido</label>
+            <textarea rows="4" placeholder="Ej: sin azúcar, mensaje especial..."></textarea>
+
+            <button type="submit">Enviar Pedido</button>
+
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 The Sweet Joy. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
