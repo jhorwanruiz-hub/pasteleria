@@ -24,23 +24,24 @@
 <main>
 
     <section class="products">
+        
+        <!-- En tu archivo de contacto, busca el formulario y asegúrate que tenga estos 'name' -->
+    <form class="product-card" id="contact-form">
+        <h3>Envíanos un mensaje</h3>
 
-        <!-- el formulariooo hehe -->
-        <form class="product-card">
-            <h3>Envíanos un mensaje</h3>
+        <label>Nombre</label>
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
 
-            <label>Nombre</label>
-            <input type="text" placeholder="Tu nombre" required>
+        <label>Correo electrónico</label>
+        <input type="email" name="email" placeholder="correo@email.com" required>
 
-            <label>Correo electrónico</label>
-            <input type="email" placeholder="correo@email.com" required>
+        <label>Mensaje</label>
+        <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
 
-            <label>Mensaje</label>
-            <textarea rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
-
-            <button type="submit">Enviar mensaje</button>
-        </form>
-
+        <button type="submit" id="submit-btn">Enviar mensaje</button>
+        <p id="respuesta"></p>
+    </form>
+        
         <!-- informacion de contacto, el numero es falso por si akaso -->
         <div class="product-card">
             <h3>Información</h3>
@@ -58,5 +59,6 @@
     <p>&copy; 2024 The Sweet Joy. Todos los derechos reservados.</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
