@@ -1,11 +1,10 @@
-/* reset */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-/* colores */
+
 :root{
     --rosa:#ffe4f0;
     --boton:#ffb3d9;
@@ -15,7 +14,7 @@
     --fondo:#fef9f3;
 }
 
-/* general */
+
 body{
     font-family:Arial, sans-serif;
     background:var(--fondo);
@@ -27,7 +26,7 @@ main{
     margin:auto;
 }
 
-/* header */
+
 header{
     background:linear-gradient(135deg,#ffd6e8,#c9b1ff);
     text-align:center;
@@ -42,7 +41,7 @@ header h1{
     color:white;
 }
 
-/* menu */
+
 nav{
     background:var(--rosa);
     padding:1rem;
@@ -62,7 +61,7 @@ nav a:hover{
     color:var(--lila);
 }
 
-/* tarjetas */
+
 .products,
 .gallery{
     display:grid;
@@ -86,14 +85,14 @@ nav a:hover{
     border-radius:10px;
 }
 
-/* texto */
+
 .product-card h3,
 .card a{
     color:var(--lila);
     text-decoration:none;
 }
 
-/* botones */
+
 button,
 .btn-link{
     background:var(--boton);
@@ -110,7 +109,7 @@ button:hover,
     background:var(--hover);
 }
 
-/* formularios */
+
 form{
     display:flex;
     flex-direction:column;
@@ -125,7 +124,7 @@ textarea{
     border-radius:10px;
 }
 
-/* footer */
+
 footer{
     background:var(--rosa);
     text-align:center;
