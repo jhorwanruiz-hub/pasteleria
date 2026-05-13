@@ -1,218 +1,142 @@
-/* reset rapidito */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* colores del sitio  */
-:root {
-    --rosa-claro: #ffe4f0;
-    --rosa-boton: #ffb3d9;
-    --rosa-hover: #ff99cc;
-    --lila: #d4a5d4;
-    --texto-principal: #5a4a42;
-    --texto-secundario: #8b6b8b;
-    --fondo: #fef9f3;
+/* colores */
+:root{
+    --rosa:#ffe4f0;
+    --boton:#ffb3d9;
+    --hover:#ff99cc;
+    --lila:#d4a5d4;
+    --texto:#5a4a42;
+    --fondo:#fef9f3;
 }
 
-/* base general */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--fondo);
-    color: var(--texto-principal);
-    line-height: 1.6;
+/* general */
+body{
+    font-family:Arial, sans-serif;
+    background:var(--fondo);
+    color:var(--texto);
 }
 
-main {
-    max-width: 1200px;
-    margin: auto;
+main{
+    max-width:1200px;
+    margin:auto;
 }
 
-/* header / logo */
-header {
-    background: linear-gradient(135deg, #ffd6e8 0%, #c9b1ff 100%);
-    padding: 2.5rem 1rem;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+/* header */
+header{
+    background:linear-gradient(135deg,#ffd6e8,#c9b1ff);
+    text-align:center;
+    padding:2rem;
 }
 
-header img {
-    max-width: 160px;
-    margin-bottom: 1rem;
+header img{
+    width:150px;
 }
 
-header h1,
-.logo-text {
-    color: #fff;
-    font-size: clamp(2rem, 4vw, 2.5rem);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+header h1{
+    color:white;
 }
 
-.logo-subtitle {
-    color: #fff;
-    font-size: 1rem;
-    opacity: 0.9;
-    margin-top: 0.3rem;
+/* menu */
+nav{
+    background:var(--rosa);
+    padding:1rem;
+    display:flex;
+    justify-content:center;
+    gap:1rem;
+    flex-wrap:wrap;
 }
 
-/* memu */
-nav {
-    background-color: var(--rosa-claro);
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+nav a{
+    text-decoration:none;
+    color:#8b6b8b;
+    font-weight:bold;
 }
 
-nav a {
-    color: var(--texto-secundario);
-    text-decoration: none;
-    font-weight: 600;
-    position: relative;
-    transition: color 0.3s ease;
+nav a:hover{
+    color:var(--lila);
 }
 
-/* subrayado fancy ( gay el que lo lea) */
-nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background-color: var(--lila);
-    transition: width 0.3s ease;
-}
-
-nav a:hover {
-    color: var(--lila);
-}
-
-nav a:hover::after {
-    width: 100%;
-}
-
-/* galerias / productos */
+/* tarjetas */
 .products,
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 2rem;
-    padding: 3rem 1.5rem;
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:2rem;
+    padding:2rem;
 }
 
-/* tarjetas reutilizables (estoy agotado)  */
 .product-card,
-.card {
-    background-color: #fff;
-    border-radius: 16px;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-card:hover,
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.5);
+.card{
+    background:white;
+    padding:1rem;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
 .product-card img,
-.card img {
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 1rem;
+.card img{
+    width:100%;
+    border-radius:10px;
 }
 
-/* texto dentro de las tarjetas */
+/* texto */
 .product-card h3,
-.card a {
-    color: var(--lila);
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    text-decoration: none;
+.card a{
+    color:var(--lila);
+    text-decoration:none;
 }
 
-.product-card p {
-    color: var(--texto-secundario);
-    margin-bottom: 1.2rem;
-    font-size: 0.95rem;
-}
-
-/* los botones ( y no de youtube) */
+/* botones */
 button,
-.btn-link {
-    display: inline-block;
-    background-color: var(--rosa-boton);
-    color: #fff;
-    border: none;
-    padding: 0.8rem 1.6rem;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 0.95rem;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+.btn-link{
+    background:var(--boton);
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:20px;
+    cursor:pointer;
+    text-decoration:none;
 }
 
 button:hover,
-.btn-link:hover {
-    background-color: var(--rosa-hover);
-    transform: scale(1.05);
+.btn-link:hover{
+    background:var(--hover);
 }
 
-/* fomulariooo (pedidos / contacto)*/
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-}
-
-label {
-    font-weight: 600;
-    color: var(--texto-secundario);
+/* formularios */
+form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
 }
 
 input,
 select,
-textarea {
-    padding: 0.7rem;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    font-family: inherit;
+textarea{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:10px;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-    outline: none;
-    border-color: var(--lila);
+/* footer */
+footer{
+    background:var(--rosa);
+    text-align:center;
+    padding:1.5rem;
+    margin-top:2rem;
 }
 
-button[type="submit"] {
-    align-self: flex-start;
-}
-
-/* el footer :) */
-footer {
-    background-color: var(--rosa-claro);
-    text-align: center;
-    padding: 2rem 1rem;
-    color: var(--texto-secundario);
-    margin-top: 3rem;
-    font-size: 0.9rem;
-}
-
-/* para los pobre de celular */
-@media (max-width: 600px) {
-    nav {
-        gap: 1rem;
-    }
-
-    header {
-        padding: 2rem 1rem;
+/* responsive */
+@media(max-width:600px){
+    nav{
+        flex-direction:column;
+        align-items:center;
     }
 }
